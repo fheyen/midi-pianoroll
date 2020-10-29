@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/midi-pianoroll/static/css/main.f1d4d45e.chunk.css",
+    "main.js": "/midi-pianoroll/static/js/main.6405f4ee.chunk.js",
+    "main.js.map": "/midi-pianoroll/static/js/main.6405f4ee.chunk.js.map",
+    "runtime-main.js": "/midi-pianoroll/static/js/runtime-main.c452ba8c.js",
+    "runtime-main.js.map": "/midi-pianoroll/static/js/runtime-main.c452ba8c.js.map",
+    "static/js/2.b08f66e7.chunk.js": "/midi-pianoroll/static/js/2.b08f66e7.chunk.js",
+    "static/js/2.b08f66e7.chunk.js.map": "/midi-pianoroll/static/js/2.b08f66e7.chunk.js.map",
+    "index.html": "/midi-pianoroll/index.html",
+    "precache-manifest.6487131da6b8b6d87e0919ebed7a5ef5.js": "/midi-pianoroll/precache-manifest.6487131da6b8b6d87e0919ebed7a5ef5.js",
+    "service-worker.js": "/midi-pianoroll/service-worker.js",
+    "static/css/main.f1d4d45e.chunk.css.map": "/midi-pianoroll/static/css/main.f1d4d45e.chunk.css.map",
+    "static/js/2.b08f66e7.chunk.js.LICENSE": "/midi-pianoroll/static/js/2.b08f66e7.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c452ba8c.js",
+    "static/js/2.b08f66e7.chunk.js",
+    "static/css/main.f1d4d45e.chunk.css",
+    "static/js/main.6405f4ee.chunk.js"
+  ]
+}
