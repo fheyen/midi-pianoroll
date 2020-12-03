@@ -1,22 +1,20 @@
 {
   "files": {
-    "main.css": "/midi-pianoroll/static/css/main.f1d4d45e.chunk.css",
-    "main.js": "/midi-pianoroll/static/js/main.9045fc37.chunk.js",
-    "main.js.map": "/midi-pianoroll/static/js/main.9045fc37.chunk.js.map",
-    "runtime-main.js": "/midi-pianoroll/static/js/runtime-main.c452ba8c.js",
-    "runtime-main.js.map": "/midi-pianoroll/static/js/runtime-main.c452ba8c.js.map",
-    "static/js/2.943fda71.chunk.js": "/midi-pianoroll/static/js/2.943fda71.chunk.js",
-    "static/js/2.943fda71.chunk.js.map": "/midi-pianoroll/static/js/2.943fda71.chunk.js.map",
+    "main.css": "/midi-pianoroll/static/css/main.ccd49cbe.chunk.css",
+    "main.js": "/midi-pianoroll/static/js/main.ee55ef86.chunk.js",
+    "main.js.map": "/midi-pianoroll/static/js/main.ee55ef86.chunk.js.map",
+    "runtime-main.js": "/midi-pianoroll/static/js/runtime-main.1475b73f.js",
+    "runtime-main.js.map": "/midi-pianoroll/static/js/runtime-main.1475b73f.js.map",
+    "static/js/2.1c7599d4.chunk.js": "/midi-pianoroll/static/js/2.1c7599d4.chunk.js",
+    "static/js/2.1c7599d4.chunk.js.map": "/midi-pianoroll/static/js/2.1c7599d4.chunk.js.map",
     "index.html": "/midi-pianoroll/index.html",
-    "precache-manifest.271ae9e5fd3379dd248f62cce32987a5.js": "/midi-pianoroll/precache-manifest.271ae9e5fd3379dd248f62cce32987a5.js",
-    "service-worker.js": "/midi-pianoroll/service-worker.js",
-    "static/css/main.f1d4d45e.chunk.css.map": "/midi-pianoroll/static/css/main.f1d4d45e.chunk.css.map",
-    "static/js/2.943fda71.chunk.js.LICENSE": "/midi-pianoroll/static/js/2.943fda71.chunk.js.LICENSE"
+    "static/css/main.ccd49cbe.chunk.css.map": "/midi-pianoroll/static/css/main.ccd49cbe.chunk.css.map",
+    "static/js/2.1c7599d4.chunk.js.LICENSE.txt": "/midi-pianoroll/static/js/2.1c7599d4.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.c452ba8c.js",
-    "static/js/2.943fda71.chunk.js",
-    "static/css/main.f1d4d45e.chunk.css",
-    "static/js/main.9045fc37.chunk.js"
+    "static/js/runtime-main.1475b73f.js",
+    "static/js/2.1c7599d4.chunk.js",
+    "static/css/main.ccd49cbe.chunk.css",
+    "static/js/main.ee55ef86.chunk.js"
   ]
 }
