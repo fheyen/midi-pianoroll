@@ -23,6 +23,7 @@
     "d3-shape": "^1.3.7",
     "lodash": "^4.17.20",
     "midi-parser-js": "^4.0.4",
+    "musicvis-lib": "^0.9.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-scripts": "3.3.0"

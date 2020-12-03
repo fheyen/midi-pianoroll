@@ -4,11 +4,9 @@ import { extent } from 'd3-array';
 import { axisBottom, axisLeft } from 'd3-axis';
 import { select } from 'd3-selection';
 import View from '../lib/ui/View';
-import { flattenArray } from '../lib/utils/ArrayUtils';
+import { Utils, Midi } from 'musicvis-lib';
 import { schemeCategory10 } from 'd3-scale-chromatic';
 import { drawNoteTrapezoid, setupCanvas, clipLeftRight } from '../lib/ui/Graphics';
-import { getMidiNoteByNr, isSharp } from '../lib/Midi';
-import { swapSoSmallerFirst, clipValue } from '../lib/utils/MathUtils';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faToggleOn, faToggleOff } from '@fortawesome/free-solid-svg-icons';
 
@@ -55,7 +53,7 @@ export default class PitchTimeChart extends View {
         const xAxis = axisBottom(x);
         const yAxis = axisLeft(y);
         if (yAxisLabelType === 'note') {
-            yAxis.tickFormat(d => getMidiNoteByNr(d)?.label);
+            yAxis.tickFormat(d => Midi.getMidiNoteByNr(d)?.label);
         }
         const xAxisEl = svg.append('g')
             .attr('class', 'axis')
@@ -122,7 +120,7 @@ export default class PitchTimeChart extends View {
         if (midiFileData && midiFileData.length > 0) {
             if (selectedTrack === 'all') {
                 // Show all tracks
-                allNotes = flattenArray(midiFileData);
+                allNotes = Utils.flattenArray(midiFileData);
             } else {
                 // Show selected track
                 track = Math.min(selectedTrack, midiFileData.length - 1);
@@ -197,7 +195,7 @@ export default class PitchTimeChart extends View {
         const xPos = margin.left;
         for (let pitch = low - 1; pitch <= high + 1; pitch++) {
             // Only draw for shaprs
-            if (isSharp(pitch)) {
+            if (Midi.isSharp(pitch)) {
                 const yPos = margin.top + y(pitch) - rowHeight / 2;
                 ctx.fillRect(xPos, yPos, width, rowHeight);
             }
@@ -269,9 +267,9 @@ export default class PitchTimeChart extends View {
         let endTime = xOv.invert(endX - margin.left);
         // Clip to domain
         const [minTime, maxTime] = xOv.domain();
-        startTime = clipValue(startTime, minTime, maxTime);
-        endTime = clipValue(endTime, minTime, maxTime);
-        const sorted = swapSoSmallerFirst(startTime, endTime);
+        startTime = Utils.clipValue(startTime, minTime, maxTime);
+        endTime = Utils.clipValue(endTime, minTime, maxTime);
+        const sorted = Utils.swapSoSmallerFirst(startTime, endTime);
         // Make selection at least 1 second wide
         if (sorted[1] - sorted[0] < 1) {
             sorted[1] = sorted[0] + 1;

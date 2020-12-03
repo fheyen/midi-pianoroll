@@ -4,7 +4,7 @@ import MidiParser from 'midi-parser-js';
 import PitchTimeChart from './components/PitchTimeChart';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { preprocessMidiFileData } from './lib/MidiParser';
+import { preprocessMidiFileData } from 'musicvis-lib';
 
 
 export default class App extends Component {

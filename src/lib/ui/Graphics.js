@@ -1,4 +1,4 @@
-import { getBoxplotCharacteristics, kernelEpanechnikov, kernelDensityEstimator } from "../utils/StatisticsUtils";
+import { Utils } from "musicvis-lib";
 import { curveMonotoneX, curveLinear, line } from "d3-shape";
 import { scaleLinear } from "d3-scale";
 import { extent, max } from "d3-array";
@@ -115,7 +115,7 @@ export function drawBoxplot(
     fillBox = 'rgba(70, 130, 180, 0.8)',
     fillWhisk = 'steelblue'
 ) {
-    const { q1, q2, q3, r0, r1 } = getBoxplotCharacteristics(data);
+    const { q1, q2, q3, r0, r1 } = Utils.getBoxplotCharacteristics(data);
     // Get positions
     const q1Pos = margin.left + x(q1);
     const q2Pos = margin.left + x(q2);
@@ -158,7 +158,7 @@ export function drawBoxplot(
  * @param {number} ticks number of ticks for which to compute a curve point
  */
 export function drawKdeAreaChart(ctx, margin, x, yPos, plotHeight, data, smooth = true, fillStyle, bandwidth = 0.5, ticks = 100) {
-    const kde = kernelDensityEstimator(kernelEpanechnikov(bandwidth), x.ticks(ticks));
+    const kde = Utils.kernelDensityEstimator(Utils.kernelEpanechnikov(bandwidth), x.ticks(ticks));
     const estimate = kde(data);
     // Force 0 for y value at start and end for correct drawing
     estimate.unshift([estimate[0][0], 0]);
@@ -194,7 +194,7 @@ export function drawKdeAreaChart(ctx, margin, x, yPos, plotHeight, data, smooth 
  * @param {number} ticks number of ticks for which to compute a curve point
  */
 export function drawViolinPlot(ctx, margin, x, yPos, plotHeight, data, smooth = true, fillStyle, bandwidth = 0.5, ticks = 100) {
-    const kde = kernelDensityEstimator(kernelEpanechnikov(bandwidth), x.ticks(ticks));
+    const kde = Utils.kernelDensityEstimator(Utils.kernelEpanechnikov(bandwidth), x.ticks(ticks));
     const estimate = kde(data);
     // Force 0 for y value at start and end for correct drawing
     estimate.unshift([estimate[0][0], 0]);
