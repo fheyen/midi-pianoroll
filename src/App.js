@@ -72,6 +72,7 @@ export default class App extends Component {
             className='fileInput'
             type='file'
             id='filereader'
+            accept='.mid,.midi'
           />
         </div>
         <PitchTimeChart
@@ -84,8 +85,8 @@ export default class App extends Component {
         <div className='githubLink'>
           <a href='https://github.com/fheyen/midi-pianoroll'>
             <FontAwesomeIcon icon={faGithub} />&nbsp;
-                        https://github.com/fheyen/midi-pianoroll
-                    </a>
+            https://github.com/fheyen/midi-pianoroll
+        </a>
         </div>
       </div >
     );
